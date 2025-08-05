@@ -23,4 +23,4 @@ jobs:
           sudo apt install k6
 
       - name: Executar testes com K6
-        run: k6 run .\scripts\smoke-testing.js
+        run: k6 run ./scripts/smoke-testing.js
