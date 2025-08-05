@@ -1,4 +1,4 @@
-name: Run K6 tests
+name: Run K6 Tests
 
 on:
   push:
@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Instalar K6
+      - name: Install K6
         run: |
           sudo apt update
           sudo apt install -y gnupg software-properties-common
@@ -22,5 +22,8 @@ jobs:
           sudo apt update
           sudo apt install k6
 
-      - name: Executar testes com K6
+      - name: Execute smoke testing
         run: k6 run ./Scripts/smoke-testing.js
+
+      - name: Execute load testing
+        run: k6 run ./Scripts/load-testing.js
