@@ -1,5 +1,8 @@
 ### K6
 Projeto desenvolvido com K6, contemplando testes de fumaça e testes de carga.
+Baixe o projeto e execute os comandos para rodar os testes:
+ - `k6 run .\Scripts\load-testing.js`
+ - `k6 run .\Scripts\smoke-testing.js`
 
 ### Teste de Fumaça (Smoke Testing)
 Executado para validar se a API está funcional antes da realização dos testes de carga e desempenho.
